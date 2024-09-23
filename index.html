@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Image Containers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px; /* Added padding around the page */
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            max-width: 800px; /* Increased width */
+            margin: auto;
+        }
+        .box {
+            background-color: lightgreen; /* Changed to light green */
+            border: 2px solid #ccc;
+            padding: 15px; /* Increased padding */
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            height: 250px; /* Set fixed height for boxes */
+            overflow: hidden; /* Ensure content doesn't spill over */
+        }
+        .box img {
+            width: 100%; /* Maintain full width */
+            height: 150px; /* Set fixed height for images */
+            object-fit: cover; /* Ensure images cover the area */
+            margin-bottom: 10px; /* Adjusted margin */
+            border-radius: 8px;
+        }
+        .box h2 {
+            margin: 5px 0; /* Adjusted margin */
+            font-size: 16px; /* Reduced font size */
+        }
+        .box p {
+            margin: 5px 0; /* Adjusted margin */
+            color: #555;
+            line-height: 1.4; /* Improved line height for readability */
+        }
+        .box button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 10px; /* Reduced padding */
+            border: none;
+            cursor: pointer;
+            font-size: 12px; /* Reduced font size */
+            border-radius: 5px;
+            width: 100%; /* Make buttons full width */
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+        .box button:hover {
+            background-color: #45a049;
+        }
+        /* Image Filters */
+        .filter-1 {
+            filter: grayscale(50%); /* Adjusted filter */
+        }
+        .filter-2 {
+            filter: sepia(50%); /* Increased sepia */
+        }
+        .filter-3 {
+            filter: brightness(1.2); /* Adjusted filter */
+        }
+        .filter-4 {
+            filter: grayscale(100%); /* Set to gray */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+            <img src="https://cdn11.bigcommerce.com/s-w6fxwapwzi/images/stencil/1280x1280/products/2730/5627/2x3-jamaica-flag-image__88094.1582736422.jpg?c=1" alt="Jamaica Flag" class="filter-1">
+            <h2>Jamaica Flag</h2>
+            <p>This is the national flag of Jamaica, known for its bold colors and rich history.</p>
+            <button>Check More</button>
+        </div>
+        <div class="box">
+            <img src="https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg" alt="USA Flag" class="filter-2">
+            <h2>USA Flag</h2>
+            <p>The Stars and Stripes represent the United States of America, symbolizing freedom and unity.</p>
+            <button>Check More</button>
+        </div>
+        <div class="box">
+            <img src="https://i1.sndcdn.com/artworks-vvht6HkEZUprpSEK-EORrDw-t500x500.jpg" alt="Art Image" class="filter-3">
+            <h2>SoundCloud Artwork</h2>
+            <p>This artwork is featured on SoundCloud, symbolizing the creativity of music artists.</p>
+            <button>Check More</button>
+        </div>
+        <div class="box">
+            <img src="https://www.highexistence.com/content/images/size/w600/wp-content/uploads/2016/05/terence-mckenna-videos-smoking-cannabis-quotes-magic-mushrooms-cured-my-depression-psychedelics-treat-depression-psilocybin-mental-health-anxiety-magic-mushrooms-cure-depression-lsd.jpg" alt="Terence McKenna" class="filter-4">
+            <h2>Terence McKenna</h2>
+            <p>Terence McKenna was an advocate for the use of psychedelics for mental health and enlightenment.</p>
+            <button>Check More</button>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
